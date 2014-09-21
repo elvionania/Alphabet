@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv = "Content-type" content = "text/html; charset = utf-8"> 
+        <title>Sample HTML5 File</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type = "text/javascript" charset = "utf-8">
+            
+            var question = "vide";
+            
+            function pageLoaded(){
+                
+            }
+            
+            function lettre(item){
+                var sound = new Audio();
+                if(item.innerHTML == undefined) sound.src = "sons/"+item+".mp3";
+                else sound.src = "sons/"+item.innerHTML.toLowerCase()+".mp3";
+                sound.play();
+            }
+            
+            function choixLettre(item) {
+                if(question != "vide"){
+                    $("#result").html("retente ta chance");
+                }
+                question = item;
+                lettre(item);
+            }
+            
+            function lettreAuHazard() {
+                var aleatoire = Math.floor((Math.random() * 26) + 1);
+                if(aleatoire == 1){ 
+                    choixLettre('a');
+                }
+                if(aleatoire == 2){ 
+                    choixLettre('b');
+                }
+                if(aleatoire == 3){ 
+                    choixLettre('c');
+                }
+                if(aleatoire == 4){ 
+                    choixLettre('d');
+                }
+                if(aleatoire == 5){ 
+                    choixLettre('e');
+                }
+                if(aleatoire == 6){ 
+                    choixLettre('f');
+                }
+                if(aleatoire == 7){ 
+                    choixLettre('g');
+                }
+                if(aleatoire == 8){ 
+                    choixLettre('h');
+                }
+                if(aleatoire == 9){ 
+                    choixLettre('i');
+                }
+                if(aleatoire == 10){ 
+                    choixLettre('j');
+                }
+                if(aleatoire == 11){ 
+                    choixLettre('k');
+                }
+                if(aleatoire == 12){ 
+                    choixLettre('l');
+                }
+                if(aleatoire == 13){ 
+                    choixLettre('m');
+                }
+                if(aleatoire == 14){ 
+                    choixLettre('n');
+                }
+                if(aleatoire == 15){ 
+                    choixLettre('o');
+                }
+                if(aleatoire == 16){ 
+                    choixLettre('p');
+                }
+                if(aleatoire == 17){ 
+                    choixLettre('q');
+                }
+                if(aleatoire == 18){ 
+                    choixLettre('r');
+                }
+                if(aleatoire == 19){ 
+                    choixLettre('s');
+                }
+                if(aleatoire == 20){ 
+                    choixLettre('t');
+                }
+                if(aleatoire == 21){ 
+                    choixLettre('u');
+                }
+                if(aleatoire == 22){ 
+                    choixLettre('v');
+                }
+                if(aleatoire == 23){ 
+                    choixLettre('w');
+                }
+                if(aleatoire == 24){ 
+                    choixLettre('x');
+                }
+                if(aleatoire == 25){ 
+                    choixLettre('y');
+                }
+                if(aleatoire == 26){ 
+                    choixLettre('z');                
+                }
+            }
+        </script>
+        <!--link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rochester"-->
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <style>
+      body {
+        font-family: 'ecriture', serif;
+        font-size: 36px;
+      }
+       button {
+         font-family: 'ecriture', serif;
+        font-size: 36px;
+           height: 70px;
+           width: 70px;
+           margin-right: 5px;
+           margin-bottom: 5px;
+       }
+        #jeu {
+            margin-left: 100px;
+            padding-top: 10px;
+            width: 100px;
+            float: left;
+        }
+        #space1 {
+            width: 250px;
+            float: left;
+        }
+        
+        #result {
+            background-color: #FF69B4;
+            width: 200px;
+            height: 50px;
+            height: 50px;
+            padding-left: 25px;
+            padding-top: 10px;
+            float: left;
+        }
+    </style>
+    </head>
+    <body onload = "pageLoaded();">
+        <div id="minuscule">
+            <button type="button" onclick="lettre(this)">a</button>
+            <button type="button" onclick="lettre(this)">b</button>
+            <button type="button" onclick="lettre(this)">c</button>
+            <button type="button" onclick="lettre(this)">d</button>
+            <button type="button" onclick="lettre(this)">e</button>
+            <button type="button" onclick="lettre(this)">f</button>
+            <button type="button" onclick="lettre(this)">g</button>
+            <button type="button" onclick="lettre(this)">h</button>
+            <button type="button" onclick="lettre(this)">i</button>
+            <button type="button" onclick="lettre(this)">j</button>
+            <button type="button" onclick="lettre(this)">k</button>
+            <button type="button" onclick="lettre(this)">l</button>
+            <button type="button" onclick="lettre(this)">m</button>
+            <button type="button" onclick="lettre(this)">n</button>
+            <button type="button" onclick="lettre(this)">o</button>
+            <button type="button" onclick="lettre(this)">p</button>
+            <button type="button" onclick="lettre(this)">q</button>
+            <button type="button" onclick="lettre(this)">r</button>
+            <button type="button" onclick="lettre(this)">s</button>
+            <button type="button" onclick="lettre(this)">t</button>
+            <button type="button" onclick="lettre(this)">u</button>
+            <button type="button" onclick="lettre(this)">v</button>
+            <button type="button" onclick="lettre(this)">w</button>
+            <button type="button" onclick="lettre(this)">x</button>
+            <button type="button" onclick="lettre(this)">y</button>
+            <button type="button" onclick="lettre(this)">z</button>
+        </div>
+        <div id="majuscule">
+            <button type="button" onclick="lettre(this)">A</button>
+            <button type="button" onclick="lettre(this)">B</button>
+            <button type="button" onclick="lettre(this)">C</button>
+            <button type="button" onclick="lettre(this)">D</button>
+            <button type="button" onclick="lettre(this)">E</button>
+            <button type="button" onclick="lettre(this)">F</button>
+            <button type="button" onclick="lettre(this)">G</button>
+            <button type="button" onclick="lettre(this)">H</button>
+            <button type="button" onclick="lettre(this)">I</button>
+            <button type="button" onclick="lettre(this)">J</button>
+            <button type="button" onclick="lettre(this)">K</button>
+            <button type="button" onclick="lettre(this)">L</button>
+            <button type="button" onclick="lettre(this)">M</button>
+            <button type="button" onclick="lettre(this)">N</button>
+            <button type="button" onclick="lettre(this)">O</button>
+            <button type="button" onclick="lettre(this)">P</button>
+            <button type="button" onclick="lettre(this)">Q</button>
+            <button type="button" onclick="lettre(this)">R</button>
+            <button type="button" onclick="lettre(this)">S</button>
+            <button type="button" onclick="lettre(this)">T</button>
+            <button type="button" onclick="lettre(this)">U</button>
+            <button type="button" onclick="lettre(this)">V</button>
+            <button type="button" onclick="lettre(this)">W</button>
+            <button type="button" onclick="lettre(this)">X</button>
+            <button type="button" onclick="lettre(this)">Y</button>
+            <button type="button" onclick="lettre(this)">Z</button>
+        </div>
+        <br/><br/><br/><br/>
+        <div id="interogation">
+            <div id="jeu">
+                <button type="button" onclick="lettreAuHazard()">?</button>
+            </div>
+            <div id="space1">&nbsp;</div>
+            <div id="result">tente ta chance</div>
+        </div>
+    </body>
+</html>

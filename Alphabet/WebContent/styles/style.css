@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "ecriture";
+    src: url('../police/crayone.ttf');
+}
+
+body{
+    font-family: "ecriture";
+}
+
+#minuscule {
+    font-family: "ecriture";
+}
+
+#majuscule {
+    font-family: "ecriture";
+}
